@@ -1,0 +1,15 @@
+{
+  "$id": "json/schema/enums/weekDays.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Day of weeks",
+  "description": "This schema defines the day of weeks",
+  "definitions": {
+    "day": {
+      "javaType": "com.echitgar.json.schema.enums.WeekDays",
+      "description": "Day of weeks",
+      "type": "string",
+      "enum": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "default": "Sunday"
+    }
+  }
+}
