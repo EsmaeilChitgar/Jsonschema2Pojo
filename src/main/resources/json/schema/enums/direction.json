@@ -1,0 +1,35 @@
+{
+  "$id": "json/schema/enums/direction.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Compass direction",
+  "description": "Compass direction",
+  "definitions": {
+    "direction": {
+      "javaType": "com.echitgar.json.schema.enums.Direction",
+      "description": "One of compass directions",
+      "type": "string",
+      "javaInterfaces": ["com.echitgar.schema.interfaces.EnumInterface"],
+      "enum": [
+        "North",
+        "South",
+        "East",
+        "West"
+      ],
+      "javaEnums": [
+        {
+          "name": "North"
+        },
+        {
+          "name": "South"
+        },
+        {
+          "name": "East"
+        },
+        {
+          "name": "West"
+        }
+      ],
+      "default": "North"
+    }
+  }
+}
