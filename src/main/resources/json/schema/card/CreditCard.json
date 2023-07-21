@@ -1,0 +1,38 @@
+{
+  "$id": "json/schema/card/creditCard.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Credit Card title",
+  "description": "Credit Card description",
+  "type": "object",
+  "javaType": "com.echitgar.json.schema.card.CreditCard",
+  "javaInterfaces": [
+    "com.echitgar.schema.interfaces.CardInterface"
+  ],
+  "definitions": {
+  },
+  "properties": {
+    "name": {
+      "description": "Name that identifies the Credit Card.",
+      "$ref": "../type/basic.json#/definitions/name"
+    },
+    "number": {
+      "description": "cardNumber description.",
+      "type": "string"
+    },
+    "expirationDate": {
+      "description": "expirationDate description.",
+      "$ref": "../type/basic.json#/definitions/date"
+    },
+    "cvv": {
+      "description": "additional property.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "number",
+    "expirationDate",
+    "cvv"
+  ],
+  "additionalProperties": false
+}
