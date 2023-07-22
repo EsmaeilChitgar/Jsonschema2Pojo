@@ -1,0 +1,27 @@
+{
+  "$id": "json/schema/printer/printer.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Printer title",
+  "description": "Printer description",
+  "type": "object",
+  "javaType": "com.echitgar.json.schema.printer.Printer",
+  "javaInterfaces": ["com.echitgar.schema.interfaces.PrinterInterface"],
+  "definitions": {
+  },
+  "properties": {
+    "id": {
+      "description": "Unique identifier that identifies this printer instance.",
+      "$ref": "../type/basic.json#/definitions/uuid"
+    },
+    "name": {
+      "description": "Name that identifies the printer.",
+      "$ref": "../type/basic.json#/definitions/name"
+    },
+    "model": {
+      "description": "model description",
+      "$ref": "../type/basic.json#/definitions/name"
+    }
+  },
+  "required": ["id"],
+  "additionalProperties": false
+}

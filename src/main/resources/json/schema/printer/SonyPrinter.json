@@ -1,0 +1,19 @@
+{
+  "$id": "json/schema/printer/sonyPrinter.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sony printer title",
+  "description": "Sony printer",
+  "type": "object",
+  "javaType": "com.echitgar.json.schema.printer.SonyPrinter",
+  "extends" : {
+    "$ref" : "Printer.json"
+  },
+  "properties": {
+    "quality": {
+      "description": "quality of printer 1..3,  (1 is the best quality)",
+      "$ref": "../type/basic.json#/definitions/number"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}
