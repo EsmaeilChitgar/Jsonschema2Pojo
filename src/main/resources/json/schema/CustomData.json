@@ -1,0 +1,45 @@
+{
+  "$id": "json/schema/customData.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Custom-Data containing all examples in this demo project",
+  "description": "Custom-Data description",
+  "type": "object",
+  "javaType": "com.echitgar.json.schema.CustomData",
+  "properties": {
+    "id": {
+      "description": "Id of custom-data",
+      "$ref": "type/basic.json#/definitions/uuid"
+    },
+    "dayOfWeek": {
+      "description": "day of week enum.",
+      "$ref": "enums/weekDays.json#/definitions/day"
+    },
+    "direction": {
+      "description": "direction in 4 ways",
+      "$ref": "enums/direction.json#/definitions/direction"
+    },
+    "email": {
+      "description": "email",
+      "$ref": "type/basic.json#/definitions/email"
+    },
+    "printer": {
+      "description": "Canon printer",
+      "$ref": "printer/CanonPrinter.json"
+    },
+    "card": {
+      "description": "card",
+      "oneOf": [
+        {
+          "$ref": "card/CreditCard.json"
+        },
+        {
+          "$ref": "card/DebitCard.json"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "additionalProperties": false
+}
